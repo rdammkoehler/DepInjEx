@@ -89,5 +89,26 @@ namespace TestDepInjEx
             // 4 - Verify Result
             Assert.Equal(expectedSum, result);
         }
+
+        class FailingBOMFetcher : IBOMFetcher
+        {
+            public List<IBOMLineItem> LineItems(BigInteger bomId)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
+
+        [Fact]
+        public void TestTotalCost_RaisesAnExceptionIfTheFetcherFails()
+        {
+            // 1 - Create Test Double
+            var fakeBomFetcher = new FailingBOMFetcher();
+            // 2 - Inject Test Double (Constructor Injection)
+            var bomCalculator = new BOMCalculator(fakeBomFetcher);
+            var bomId = new BigInteger(1);
+
+            // 3 - Execute Test && Verify Result
+            Assert.Throws<System.NotImplementedException>(() => bomCalculator.TotalCost(bomId));
+        }
     }
 }

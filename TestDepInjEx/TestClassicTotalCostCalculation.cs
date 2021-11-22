@@ -27,5 +27,7 @@ namespace TestDepInjEx
             // delete from LineItem where BOMId == bomId
             // delete from BOM where BOMId == bomId
         }
+
+        // ...more tests with more sql statements and complications...
     }
 }

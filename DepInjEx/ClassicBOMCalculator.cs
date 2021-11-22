@@ -5,6 +5,9 @@ using System.Numerics;
 
 namespace DepInjEx
 {
+    /// <summary>
+    /// Represents a single line item on a BOM
+    /// </summary>
     class BOMLineItem
     {
         private decimal _cost;
@@ -20,6 +23,9 @@ namespace DepInjEx
         }
     }
 
+    /// <summary>
+    /// Fetches BOM Data from the database using the BOM Id
+    /// </summary>
     class BOMFetcher
     {
         public List<BOMLineItem> LineItems(BigInteger bomId)
@@ -27,7 +33,7 @@ namespace DepInjEx
             string constr;
             SqlConnection conn;
 
-            constr = @"Data Source=DESKTOP-GP8F496;Initial Catalog=Demodb;User ID=sa;Password=24518300";
+            constr = @"Data Source=MyDatabase;Initial Catalog=DepInjEx;User ID=sa;Password=password";
 
             conn = new SqlConnection(constr);
 
@@ -49,8 +55,16 @@ namespace DepInjEx
         }
     }
 
+    /// <summary>
+    /// Calculates things about a BOM from the database
+    /// </summary>
     public class ClassicBOMCalculator
     {
+        /// <summary>
+        /// Get the TotalCost of the BOM Line Items from the database
+        /// </summary>
+        /// <param name="bomId">The Unique ID of the BOM in the database</param>
+        /// <returns>The Sum of LineItem Costs</returns>
         public decimal TotalCost(BigInteger bomId)
         {
             var bomFetcher = new BOMFetcher();
