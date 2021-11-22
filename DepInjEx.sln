@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DepInjEx", "DepInjEx\DepInjEx.csproj", "{DFA6F848-A25E-4ED1-9BCF-20F2C753271A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDepInjEx", "TestDepInjEx\TestDepInjEx.csproj", "{B10E2641-E7EA-4071-B0B0-B7C05BA0B57F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFA6F848-A25E-4ED1-9BCF-20F2C753271A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFA6F848-A25E-4ED1-9BCF-20F2C753271A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFA6F848-A25E-4ED1-9BCF-20F2C753271A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFA6F848-A25E-4ED1-9BCF-20F2C753271A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B10E2641-E7EA-4071-B0B0-B7C05BA0B57F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B10E2641-E7EA-4071-B0B0-B7C05BA0B57F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B10E2641-E7EA-4071-B0B0-B7C05BA0B57F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B10E2641-E7EA-4071-B0B0-B7C05BA0B57F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
