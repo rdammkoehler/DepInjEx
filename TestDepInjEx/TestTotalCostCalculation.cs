@@ -90,7 +90,7 @@ namespace TestDepInjEx
             Assert.Equal(expectedSum, result);
         }
 
-        class FailingBOMFetcher : IBOMFetcher
+        private class FailingBOMFetcher : IBOMFetcher
         {
             public List<IBOMLineItem> LineItems(BigInteger bomId)
             {

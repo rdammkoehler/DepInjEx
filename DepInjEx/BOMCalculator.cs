@@ -21,6 +21,19 @@ namespace DepInjEx
     }
 
     /// <summary>
+    /// An implementation of IBOMFetcher that connects to the database to fetch LineItems from a BOM
+    ///
+    /// This is a stub for demo purposes, actual code has been omitted.
+    /// </summary>
+    public class DBBOMFetcher : IBOMFetcher
+    {
+        public List<IBOMLineItem> LineItems(BigInteger bomId)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
+
+    /// <summary>
     /// Calculates things about a BOM from the database
     /// </summary>
     public class BOMCalculator
